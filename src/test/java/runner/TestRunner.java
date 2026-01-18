@@ -5,15 +5,16 @@ import org.junit.runner.RunWith;
 import static io.cucumber.junit.CucumberOptions.SnippetType.*;
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features/register.feature",
-        glue = {"stepdefinitions", "hooks"},
+        features = "src/test/resources/features/checkout.feature",
+        glue = {"stepdefinitions",
+                "hooks",
+                "custom_type" },
         plugin = {
                 "pretty",
                 "html:target/cucumber-report.html"
         },
         monochrome = true,
         snippets = CAMELCASE
-
 
 )
 public class TestRunner {

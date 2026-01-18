@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import pages.*;
 import java.util.List;
 
-public class AddToCartStepDefs {
+public class CartSteps {
     private final WebDriver driver = Hooks.driver;
 
     @Given("I am on the Store page")

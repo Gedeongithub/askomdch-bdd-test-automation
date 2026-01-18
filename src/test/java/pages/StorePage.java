@@ -18,7 +18,6 @@ public class StorePage extends BasePage {
 
     public void addProductToCart(String productName){
         By product = By.xpath("//h2[normalize-space()='"+productName+"']");
-        //h2[normalize-space()='Anchor Bracelet']
         By addToCartBtn = By.xpath("//a[contains(@aria-label, 'Add') and contains(@aria-label, '"
                 + productName + "')]");
 

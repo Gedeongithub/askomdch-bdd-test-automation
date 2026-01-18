@@ -2,7 +2,6 @@ package stepdefinitions;
 
 import hooks.Hooks;
 import io.cucumber.datatable.DataTable;
-import io.cucumber.java.PendingException;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.WebDriver;
 import pages.AccountPage;
@@ -11,7 +10,7 @@ import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 
-public class RegisterStepDefs {
+public class RegisterSteps {
     private WebDriver driver = Hooks.driver;
 
 

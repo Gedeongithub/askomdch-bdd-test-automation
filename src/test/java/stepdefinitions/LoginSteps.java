@@ -9,7 +9,7 @@ import java.util.Map;
 import static org.junit.Assert.assertEquals;
 
 
-public class AccountLoginStepDefs {
+public class LoginSteps {
     private WebDriver driver = Hooks.driver;
 
 
