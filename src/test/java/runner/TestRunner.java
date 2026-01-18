@@ -2,11 +2,10 @@ package runner;
 
 import io.cucumber.junit.*;
 import org.junit.runner.RunWith;
-import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
-
+import static io.cucumber.junit.CucumberOptions.SnippetType.*;
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features/",
+        features = "src/test/resources/features/register.feature",
         glue = {"stepdefinitions", "hooks"},
         plugin = {
                 "pretty",

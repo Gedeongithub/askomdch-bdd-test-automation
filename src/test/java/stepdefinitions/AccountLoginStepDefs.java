@@ -22,7 +22,6 @@ public class AccountLoginStepDefs {
     public void iLogInWithValidCredentials(DataTable table) {
 
         Map<String,String> credentials = table.asMap(String.class,String.class);
-
         new AccountPage(driver).setCredentials(credentials.get("username"),credentials.get("password"));
     }
 
@@ -45,7 +44,7 @@ public class AccountLoginStepDefs {
     @Then("I should see a login error message")
     public void iShouldSeeALoginErrorMessage() {
 
-        String actual  =new AccountPage(driver).isErrorMessage();
+        String actual  = new AccountPage(driver).isErrorMessage();
         String expected = "One of your username or password is wrong or empty";
         assertEquals("You should not log in",expected,errorMessage(actual));
     }
