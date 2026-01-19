@@ -5,7 +5,7 @@ import org.junit.runner.RunWith;
 import static io.cucumber.junit.CucumberOptions.SnippetType.*;
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features/checkout.feature",
+        features = "src/test/resources/features/",
         glue = {"stepdefinitions",
                 "hooks",
                 "custom_type" },
@@ -13,6 +13,7 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.*;
                 "pretty",
                 "html:target/cucumber-report.html"
         },
+        tags ="@account",
         monochrome = true,
         snippets = CAMELCASE
 

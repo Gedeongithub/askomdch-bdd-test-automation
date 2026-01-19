@@ -1,3 +1,4 @@
+@account
 Feature: User login
 
   As an askmodch registered user

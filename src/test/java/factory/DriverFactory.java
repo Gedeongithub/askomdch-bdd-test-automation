@@ -7,14 +7,14 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import utils.ConfigLoader;
 
 public class DriverFactory {
-    private static WebDriver driver;
+    private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
     public static WebDriver initializeDriver(String browser){
-
+        WebDriver driver;
         switch(browser){
             case "chrome":
                 System.setProperty("webdriver.chrome.driver", ConfigLoader.getInstance().getChrome());
                 driver = new ChromeDriver();
-                driver.manage().window().maximize();
+//                driver.manage().window().maximize();
                 break;
             case "firefox":
                 System.setProperty("webdriver.gekco.driver", ConfigLoader.getInstance().getFirefox());
@@ -30,6 +30,10 @@ public class DriverFactory {
                 throw new IllegalStateException("Invalid browser: "+browser);
         }
 
+        DriverFactory.driver.set(driver);
         return driver;
+    }
+    public static WebDriver getDriver(){
+        return driver.get();
     }
 }

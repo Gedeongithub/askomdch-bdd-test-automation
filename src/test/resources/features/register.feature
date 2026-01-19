@@ -1,3 +1,4 @@
+@account
 Feature: User Registration
 
   As an Askmodch new user,

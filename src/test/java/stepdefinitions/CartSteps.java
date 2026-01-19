@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import domain_objects.Product;
 import hooks.Hooks;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
@@ -16,10 +17,11 @@ public class CartSteps {
     }
 
     @When("I add the following products to the cart")
-    public void iAddToTheCart(DataTable dataTable) {
-        List<String> products = dataTable.asList(String.class);
-        for(String product:products){
-            new StorePage(driver).addProductToCart(product);
+    public void iAddToTheCart(List<Product> products) {
+//        List<String> products = dataTable.asList(String.class);
+
+        for(Product product:products){
+            new StorePage(driver).addProductToCart(product.getName());
         }
 
     }
@@ -30,10 +32,10 @@ public class CartSteps {
     }
 
     @Then("products should be added to the cart")
-    public void shouldBeAddedToTheCart(DataTable dataTable) {
-        List<String> products = dataTable.asList(String.class);
-        for (String product : products) {
-            new StorePage(driver).isProductInCart(product);
+    public void shouldBeAddedToTheCart(List<Product> products) {
+//        List<String> products = dataTable.asList(String.class);
+        for (Product product : products) {
+            new StorePage(driver).isProductInCart(product.getName());
         }
     }
 }
