@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import context.TestContext;
 import hooks.Hooks;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
@@ -12,7 +13,9 @@ import static org.junit.Assert.assertEquals;
 public class LoginSteps {
     private WebDriver driver = Hooks.driver;
 
-
+public LoginSteps(TestContext testContext){
+    System.out.println("STEP DEF: DI: SCENARIO NAME: "+testContext.scenarioName);
+}
     @Given("I am on the Account Page")
     public void iAmOnTheAccountPage() {
         new AccountPage(driver).openAccountPage();

@@ -19,10 +19,10 @@
                <groupId>org.apache.maven.plugins</groupId>
                <artifactId>maven-surefire-plugin</artifactId>
                <version>3.5.4</version>
-               <configuration>
-                   <parallel>methods</parallel>
-                   <useUnlimitedThreads>true</useUnlimitedThreads>
-               </configuration>
+<!--               <configuration>-->
+<!--                   <parallel>methods</parallel>-->
+<!--                   <useUnlimitedThreads>true</useUnlimitedThreads>-->
+<!--               </configuration>-->
            </plugin>
        </plugins>
     </build>
@@ -45,6 +45,13 @@
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
+            <version>7.33.0</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- Source: https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-picocontainer</artifactId>
             <version>7.33.0</version>
             <scope>test</scope>
         </dependency>

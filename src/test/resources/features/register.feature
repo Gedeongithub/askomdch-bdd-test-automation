@@ -12,11 +12,11 @@ Feature: User Registration
 
     Scenario: Register with valid data
      When New user register with valid data
-      |username     |tester8          |
-      |email address|tester8@gmail.com|
+      |username     |tester18          |
+      |email address|tester18@gmail.com|
       |password     |tesTer12345@askomdch|
      And click Register button
-     Then New user is registered and get welcome message with name "tester8"
+     Then New user is registered and get welcome message with name "tester18"
 
   Rule: New use is not registered as provided data are invalid
     Scenario Outline: Register with invalid data

@@ -1,3 +1,4 @@
+@cart
 Feature: Add products to shopping cart
 
   In order to purchase products

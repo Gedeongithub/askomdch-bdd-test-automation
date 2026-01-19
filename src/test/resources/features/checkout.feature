@@ -1,3 +1,4 @@
+@checkout
 Feature: Checkout products
 
   In order to complete my purchase

@@ -13,7 +13,7 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.*;
                 "pretty",
                 "html:target/cucumber-report.html"
         },
-        tags ="@account",
+//        tags ="@account",
         monochrome = true,
         snippets = CAMELCASE
 
